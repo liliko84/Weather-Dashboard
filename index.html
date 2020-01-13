@@ -17,36 +17,36 @@
   <main class="container-fluid mb-5">
     <div class="row">
       <div class="col-12 col-md-4">
+        <div class="card mb-4">
+          <h4 class="card-header bg-dark text-light">
+            Search For City
+          </h4>
+          <form class="card-body" id="search-form">
+            <div class="form-group">
+              <input type="text" class="form-control" id="search-input" placeholder="Enter search term" />
+            </div>
+            <button type="submit" class="btn-block btn-outline-success">find</button>
+            <button type="button" id="clear=button">clear</button>
+          </form>
+        </div>
       </div>
-    </div>
-    <div class="col-12 col-md-8">
-      <div class="card">
-        <h4 class="card-header bg-dark text-light"> City Name</h4>
-        <div class="card-body" id="search-results">
+      <div class="col-12 col-md-8">
+        <div class="card">
+          <h4 class="card-header bg-dark text-light"> City Name</h4>
+          <div class="card-body" id="search-results">
+          </div>
         </div>
       </div>
     </div>
-
+    <!-- 
     <h1 id="geo-status"></h1>
-    <button id="find-me">Show my location</button><br />
+    <button id="find-me">Show my location</button><br /> -->
 
 
 
-    <h4 class="card-header bg-dark text-light">
-      Search For City
-    </h4>
-    <form class="card-body" id="search-form">
-      <div class="form-group">
-        <input type="text" class="form-control" id="search-input" placeholder="Enter search term" />
 
-        <button type="submit" class="btn-block btn-outline-sucsess">find</button>
-        <button type="button" id="clear=button">clear</button>
-    </form>
-    </input>
-    </div>
-    </div>
   </main>
-  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./assets/JS/script.js"></script>
 </body>
