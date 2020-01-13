@@ -23,10 +23,20 @@
           </h4>
           <form class="card-body" id="search-form">
             <div class="form-group">
-              <input type="text" class="form-control" id="search-input" placeholder="Enter search term" />
+              <input type="text" class="form-control" id="search-input" />
             </div>
             <button type="submit" class="btn-block btn-outline-success">find</button>
-            <button type="button" id="clear=button">clear</button>
+
+
+            <div class="card-body" >
+              <div class="row">
+                <div class="col-12 ">London</div>
+                <div class="col-12">Berlin</div>
+                <!-- <div class="w-100"></div> -->
+                <div class="col-12">New York City</div>
+                <div class="col-12">San-Francisco</div>
+              </div>
+            </div>
           </form>
         </div>
       </div>
@@ -34,19 +44,19 @@
         <div class="card">
           <h4 class="card-header bg-dark text-light"> City Name</h4>
           <div class="card-body" id="search-results">
+            <div class="City"></div>
+            <div class="Humidity"></div>
+            <div class="Wind Speed"></div>
+            <div class="UV Index"></div>
+
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
     <!-- 
     <h1 id="geo-status"></h1>
     <button id="find-me">Show my location</button><br /> -->
-
-
-
-
   </main>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./assets/JS/script.js"></script>
 </body>

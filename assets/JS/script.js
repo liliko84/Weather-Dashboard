@@ -13,14 +13,21 @@ searchForm.on("submit", function (event) {
   
   $.ajax({
     url: queryUrl,
-    metho: "GET"
+    method: "GET"
   })
-    .then(function (data) {
-      console.log(data)
-    })
-})
+    .then(function (weatherRes) {
+      console.log(weatherRes)
+      $(".city").text(weatherRes.name);
+      $(".Humiduty").text(weather.Res.main.humiduty);
 
-findMe.onclick = function () {
+    });
+      weatherSearch (london,England)
+     
+
+    })
+
+
+ /* findMe.onclick = function () {
   function success(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -28,7 +35,7 @@ findMe.onclick = function () {
     status.textContent = '';
     console.log(latitude, longitude)
   }
-
+ 
   function error() {
     status.textContent = 'Unable to retrieve your location';
   }
@@ -39,6 +46,6 @@ findMe.onclick = function () {
     status.textContent = 'Locating…';
     navigator.geolocation.getCurrentPosition(success, error);
   }
-}
-
+};
+ */
 
