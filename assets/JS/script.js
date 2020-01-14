@@ -1,6 +1,6 @@
-var findMe = document.getElementById("find-me");
-var status = document.getElementById("geo-status");
-var API_KEY = "166a433c57516f51dfab1f7edaed8413"
+var findMe = $("button");
+var status = $("user-input");
+var API_KEY = "675f38ddab3b5842e555b4006a7973c1"; 
 var searchForm = $("#search-form")
 
 searchForm.on("submit", function (event) {
@@ -18,13 +18,14 @@ searchForm.on("submit", function (event) {
     .then(function (weatherRes) {
       console.log(weatherRes)
       $(".city").text(weatherRes.name);
-      $(".Humiduty").text(weather.Res.main.humiduty);
-
+      $(".temperature").text(weatherRes.main.temperature);
+      $(".humidity").text(weatherRes.main.humidity);
+      $(".wind-speed").text(weatherRes.wind.speed);
     });
-      weatherSearch (london,England)
+     /*  weatherSearch (city,country) */
      
 
-    })
+    });
 
 
  /* findMe.onclick = function () {
