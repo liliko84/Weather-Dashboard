@@ -1,7 +1,9 @@
-var findMe = $("button");
-var status = $("user-input");
+var findMe = $("#search-input");
+var status = $("#search-results");
 var API_KEY = "675f38ddab3b5842e555b4006a7973c1"; 
-var searchForm = $("#search-form")
+var searchForm = $("#search-form");
+var cityArr = [];
+
 
 searchForm.on("submit", function (event) {
   event.preventDefault()
@@ -16,19 +18,28 @@ searchForm.on("submit", function (event) {
     method: "GET"
   })
     .then(function (weatherRes) {
-      console.log(weatherRes)
-      $(".city").text(weatherRes.name);
-      $(".temperature").text(weatherRes.main.temperature);
-      $(".humidity").text(weatherRes.main.humidity);
-      $(".wind-speed").text(weatherRes.wind.speed);
+      console.log(weatherRes);
+     /*  $("#search-form").text(JSON.strongify(weatherRes)) */;
+      $(".City").text(weatherRes.name);
+      $(".Temperature").text(weatherRes.main.temp);
+      $(".Humidity").text(weatherRes.main.humidity);
+      $(".Wind-Speed").text(weatherRes.wind.speed);
     });
+
+   
      /*  weatherSearch (city,country) */
      
-
+    cityArr.forEach(function(city){
+      $("#user-input")
+      .text(city)
+      .Attr("weather-data",city)
+      .appendTo("#user-input");
     });
 
+    })
 
- /* findMe.onclick = function () {
+
+ findMe.onclick = function () {
   function success(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -48,5 +59,3 @@ searchForm.on("submit", function (event) {
     navigator.geolocation.getCurrentPosition(success, error);
   }
 };
- */
-
