@@ -11,16 +11,18 @@
 
 <body>
 
-  <header class="jumbotron jumbotron-fluid bg-dark text-light px-2 text-center">
-    <h1 class="display-2">Weather Dashboard</h1>
+  <header class="jumbotron jumbotron-fluid bg-dark text-light px-2 text-center m-3 p-2">
+    <h1 class="display-3">Weather Dashboard</h1>
   </header>
   <main class="container-fluid mb-5">
     <div class="row">
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-3">
         <div class="card mb-4">
-          <h4 class="card-header bg-dark text-light">
+          <h4 class="card-header bg-info text-light">
             Search For City
           </h4>
+
+          <button id="findMyLocation">Find Me</button>
           <form class="card-body" id="search-form">
             <div class="form-group">
               <input type="text" class="form-control" id="search-input" />
@@ -36,26 +38,35 @@
           </form>
         </div>
       </div>
-      <div class="col-12 col-md-8">
+      <div class="col-12 col-md-9">
         <div class="card">
-          <h4 class="card-header bg-dark text-light"> City Name</h4>
+          <h4 class="card-header bg-info text-light"> Information</h4>
           <div class="card-body" id="search-results">
-            <div>City: <span class="City"></span></div>
+            <h3>City: <span class="City"></span></h3>
             <div>Temperature: <span class="Temperature"></span></div>
 
             <div>Humidity: <span class="Humidity"></span></div>
             <div>Wind Speed: <span class="Wind-Speed"></span></div>
+            <div>UV INDEX: <span class="uv-index"></span></div>
+
 
 
           </div>
         </div>
+        <div class="row five-day justify-content-around mt-2">
+        
+        </div>
       </div>
-      <!-- </div> -->
-      <!-- 
+  
+       
+                <!-- </div> -->
+                <!-- 
     <h1 id="geo-status"></h1>
     <button id="find-me">Show my location</button><br /> -->
   </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./assets/JS/script.js"></script>
 </body>
 
