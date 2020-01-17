@@ -88,7 +88,7 @@ function fiveDayForecast(city) {
     $('.five-day').append(`
     <div class="col-md-2 col-12">
       <div class="card">
-        <div class="card-body">
+        <div class="card-body bg-primary">
           <h6>${day.dt_txt}</h6>
           <p>Temp: ${day.main.temp} F</p>
           <p>Humidity: ${day.main.humidity}%</p>
